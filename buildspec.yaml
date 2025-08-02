@@ -3,7 +3,7 @@ version: 0.2
 phases: 
   install:
     runtime-versions:
-      nodejs: 18
+      nodejs: 21
     commands:
       - echo "Installing Dependencies"
       - npm install
@@ -18,8 +18,8 @@ phases:
       - echo "Build Completed on $(date)"
       - mkdir -p deploy
       - cp -r * deploy/
-      - cp appspec.yaml deploy/
-      - cp -r scripts/* deploy/scripts/
+#      - cp appspec.yaml deploy/
+#      - cp -r scripts/* deploy/scripts/
 
 artifacts:
   files:
