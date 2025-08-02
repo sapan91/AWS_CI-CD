@@ -1,0 +1,22 @@
+version: 0.1
+
+phases: 
+  install:
+    runtime-version:
+      node.js: 18
+    commands:
+      - echo "Installing Dependencies"
+      - npm install
+
+  build:
+    commands:
+      - echo "Building application"
+      - npm rum build
+
+  post_build: 
+    commands:
+      - echo "Build Completed on 'date'"
+      - madir -p deploy
+      - cp -r * deploy/
+      - cp appspec.yaml deploy/
+      - cp -r scripts/* deploy/scripts/
