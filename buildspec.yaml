@@ -20,3 +20,8 @@ phases:
       - cp -r * deploy/
       - cp appspec.yaml deploy/
       - cp -r scripts/* deploy/scripts/
+
+artifacrs:
+  files:
+    - deploy/**/*
+  discard-path: no
