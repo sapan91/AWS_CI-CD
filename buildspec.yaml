@@ -17,7 +17,7 @@ phases:
     commands:
       - echo "Build Completed on $(date)"
       - mkdir -p deploy
-      - cp -r * deploy/
+#      - cp -r * deploy/
 #      - cp appspec.yaml deploy/
 #      - cp -r scripts/* deploy/scripts/
 
